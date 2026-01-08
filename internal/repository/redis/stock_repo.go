@@ -46,3 +46,7 @@ func (r *RedisStockRepository) DecrStock(ctx context.Context, key string, qty in
 func (r *RedisStockRepository) SetStock(ctx context.Context, key string, qty int, expiration int) error {
 	return r.Client.Set(ctx, key, qty, 0).Err()
 }
+
+func (r *RedisStockRepository) IncrStock(ctx context.Context, key string, qty int) error {
+    return r.Client.IncrBy(ctx, key, int64(qty)).Err()
+}
