@@ -5,7 +5,7 @@ import (
 )
 
 type Product struct {
-	ID          int64     `json:"id"`
+	ID          string    `json:"id"`
 	Name        string    `json:"name"`
 	Description string    `json:"description"`
 	Price       float64   `json:"price"`
@@ -13,7 +13,7 @@ type Product struct {
 }
 
 type ProductStock struct {
-	ID          int64     `json:"id"`
+	ID          string    `json:"id"`
 	ProductID   int64     `json:"product_id"`
 	Quantity    int       `json:"quantity"`
 	Version     int       `json:"version"`
@@ -21,7 +21,7 @@ type ProductStock struct {
 }
 
 type Order struct {
-	ID        int64     `json:"id"`
+	ID        string    `json:"id"`
 	UserID    int64     `json:"user_id"`
 	ProductID int64     `json:"product_id"`
 	Quantity  int       `json:"quantity"`
