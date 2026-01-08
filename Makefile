@@ -13,4 +13,7 @@ migrateup:
 migratedown:
 	migrate -path db/migration -database "postgresql://admin:password123@localhost:5432/flashsale_db?sslmode=disable" -verbose down
 
-.PHONY: postgres createdb dropdb migrateup migratedown
+test:
+	go test -v ./...
+
+.PHONY: postgres createdb dropdb migrateup migratedown test
