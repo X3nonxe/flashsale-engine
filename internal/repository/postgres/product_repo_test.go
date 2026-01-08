@@ -39,7 +39,7 @@ WHERE p.id = $1
 		require.NoError(t, err)
 		require.NotNil(t, product)
 
-		assert.Equal(t, int64(1), product.ID)
+		assert.Equal(t, "1", product.ID)
 		assert.Equal(t, "iPhone 15", product.Name)
 		assert.Equal(t, float64(15000000), product.Price)
 		assert.Equal(t, 10, qty)
